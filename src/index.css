@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 :root {
-  --teal-main: #008080;
+  --teal-main: #035353;
   --teal-med: #67b4b4;
   --teal-soft: #a7cfc6;
   --mild-bg1: #edf3f2;
@@ -69,25 +69,25 @@ button {
   font-family: "Poppins";
   font-size: 16px;
   font-weight: 800;
- background: var(--mild-bg1);
-  color: var(--charcoal);
+ background: var(--teal-main);
+  color: var(--stone);
   border: none;
   border-radius: 36px;
   
 
   box-shadow:
-    3px 3px 6px var(--teal-soft), -3px -3px 6px var(--stone);
+    3px 3px 6px var(--light-gray), -3px -3px 6px var(--stone);
 
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .hero button:hover {
-  box-shadow: 5px 5px 10px var(--teal-med), -5px -5px 10px var(--stone);
+  box-shadow: 5px 5px 10px var(--charcoal), -5px -5px 10px var(--stone);
 }
 
 .hero button:active {
   box-shadow:
-    inset 3px 3px 6px var(--teal-med), inset -3px -3px 6px var(--stone);
+    inset 3px 3px 6px var(--charcoal), inset 5px 5px 10px var(--light-gray), -3px -3px 6px var(--stone);
   transform: translateY(2px);
 }
 
