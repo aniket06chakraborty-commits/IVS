@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { supabase } from "./supabase";
+import toast, { Toaster } from "react-hot-toast";
+
 
 function App() {
   const [email, setEmail] = useState<string>("");
@@ -8,7 +10,7 @@ function App() {
 
   const handleSubmit = async () => {
     if (!email || !cardsPerYear) {
-      alert("Please fill all fields");
+      toast.error("Please fill all fields");
       return;
     }
 
@@ -23,12 +25,13 @@ function App() {
 
     if (error) {
       if (error.code === "23505") {
-        alert("You are already on the waitlist.");
+        toast.success("You're on the IVS early access list");
       } else {
-        alert("Submission failed.");
+        toast.error("Submission failed");
+
       }
     } else {
-      alert("Thanks! You're on the IVS early access list.");
+      toast.success("Thanks! You're on the IVS early access list.");
       setEmail("");
       setCardsPerYear("");
       setShowForm(false);
@@ -45,6 +48,7 @@ function App() {
 
   return (
     <div className="background">
+      <Toaster position="top-center" />
       <div className="page">
         {/* HERO SECTION */}
         <section className="hero">
@@ -77,7 +81,7 @@ function App() {
               <h3>Be among the first collectors to grade with Ivy Standards</h3>
 
               <div className="input-group">
-                <label>Email Address</label>
+                Email Address <span className="required">*</span>
                 <input
                   type="email"
                   placeholder="you@example.com"
@@ -88,7 +92,7 @@ function App() {
               </div>
 
               <div className="input-group">
-                <label>Estimated Cards Per Year</label>
+                Estimated Cards Per Year <span className="required">*</span>
                 <input
                   type="number"
                   placeholder="e.g. 50"
