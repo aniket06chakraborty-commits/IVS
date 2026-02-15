@@ -10,7 +10,7 @@ function App() {
 
   const handleSubmit = async () => {
     if (!email || !cardsPerYear) {
-      toast.error("Please fill all fields");
+      toast.error("All fields are required to be filled in order to join the waitlist");
       return;
     }
 
@@ -27,11 +27,11 @@ function App() {
       if (error.code === "23505") {
         toast.success("You're on the IVS early access list");
       } else {
-        toast.error("Submission failed");
+        toast.error("Please enter a valid email ID and a valid estimated cards per year");
 
       }
     } else {
-      toast.success("Thanks! You're on the IVS early access list.");
+      toast.success("Thanks! You're now on the IVS early access list");
       setEmail("");
       setCardsPerYear("");
       setShowForm(false);
@@ -81,7 +81,7 @@ function App() {
               <h3>Be among the first collectors to grade with Ivy Standards</h3>
 
               <div className="input-group">
-                Email Address <span className="required">*</span>
+                Email Address *
                 <input
                   type="email"
                   placeholder="you@example.com"
@@ -92,7 +92,7 @@ function App() {
               </div>
 
               <div className="input-group">
-                Estimated Cards Per Year <span className="required">*</span>
+                Estimated Cards Per Year *
                 <input
                   type="number"
                   placeholder="e.g. 50"
