@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { supabase } from "./supabase";
 import toast, { Toaster } from "react-hot-toast";
+import imageLeft from "./assets/charizard_icon.png";
+import imageRight from "./assets/pikachu_icon.png";
 
 
 function App() {
@@ -50,10 +52,15 @@ function App() {
     <div className="background">
       <Toaster position="top-center" />
       <div className="page">
+
+        <img src={imageLeft} className="corner-image left" alt="" />
+        <img src={imageRight} className="corner-image right" alt="" />
+
+
         {/* HERO SECTION */}
         <section className="hero">
           <h1>Ivy Standards</h1>
-          <p>India's First Pokémon Card Grading Service</p>
+          <p>Setting a New Standard for Pokémon Card Grading in India</p>
 
           {!showForm ? (
             <button
@@ -67,7 +74,7 @@ function App() {
                 });
               }}
             >
-              I'm Interested in Grading
+              Request Early Access
             </button>
           ) : (
             <div className="form-card">
@@ -107,6 +114,7 @@ function App() {
               </button>
             </div>
 
+
           )}
 
 
@@ -119,22 +127,24 @@ function App() {
         <section className="cards-section">
           <div className="cards">
             <div className="card">
-              <h2>The Problem</h2>
+              <h2>India’s Grading Reality</h2>
               <ul>
-                <li>Grading abroad is expensive</li>
+                <li>Grading abroad is expensive, ₹5,000+ per card</li>
                 <li>Turnaround times are too long</li>
                 <li>Shipping and customs add risk</li>
                 <li>India lacks published grading standards</li>
+                <li>Ungraded cards sell cheap</li>
               </ul>
             </div>
 
             <div className="card">
-              <h2>Our Approach</h2>
+              <h2>Why Ivy Standards?</h2>
               <ul>
-                <li>Pokémon card authentication</li>
-                <li>Transaparent grading criteria</li>
-                <li>Tamper sealed slabs</li>
-                <li>Superior overall grading experience</li>
+                <li>Professional authentication service within India</li>
+                <li>Clear, transparent grading standards</li>
+                <li>Tamper-evident slabs with secure serialisation</li>
+                <li>Expected pricing of ₹1,500 per card</li>
+                <li>Faster domestic turnaround — no overseas risk</li>
               </ul>
             </div>
           </div>
