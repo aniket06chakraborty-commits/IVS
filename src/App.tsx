@@ -10,7 +10,7 @@ function App() {
 
   const handleSubmit = async () => {
     if (!email || !cardsPerYear) {
-      toast.error("All fields are required to be filled in order to join the waitlist");
+      toast.error("All fields are required");
       return;
     }
 
@@ -25,9 +25,9 @@ function App() {
 
     if (error) {
       if (error.code === "23505") {
-        toast.success("You're on the IVS early access list");
+        toast.success("You're already on the IVS early access list");
       } else {
-        toast.error("Please enter a valid email ID and a valid estimated cards per year");
+        toast.error("Please enter valid information");
 
       }
     } else {
