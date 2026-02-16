@@ -136,7 +136,7 @@ function App() {
               <p>Ungraded, subjective condition</p>
               <div className="roi-value">
                 <span className="mult">1x</span>
-                <span class="sub">Market Value</span>
+                <span className="sub">Market Value</span>
               </div>
               <div className="roi-footer danger">High Risk / Low Liquidity</div>
             </div>
@@ -148,7 +148,7 @@ function App() {
               <p>Certified, International Market</p>
               <div className="roi-value">
                 <span className="mult">2.5x - 3x</span>
-                <span class="sub">Average Return</span>
+                <span className="sub">Average Return</span>
               </div>
               <div className="roi-footer warning">High Fees / Long Wait</div>
             </div>
@@ -161,7 +161,7 @@ function App() {
               <p>Trusted, Local, Efficient</p>
               <div className="roi-value">
                 <span className="mult">2x - 2.3x</span>
-                <span class="sub">Projected Return</span>
+                <span className="sub">Projected Return</span>
               </div>
               <div className="roi-footer success">Lower Cost / Faster Profit</div>
             </div>
