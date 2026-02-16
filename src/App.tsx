@@ -59,8 +59,8 @@ function App() {
 
         {/* HERO SECTION */}
         <section className="hero">
-          <h1>Ivy Standards (IVS)</h1>
-          <p>Setting a New Standard for Pokémon Card Grading in India</p>
+          <h1>Ivy Standards</h1>
+          <p>IVS - Setting a New Standard for Pokémon Card Grading in India</p>
 
           {!showForm ? (
             <button
@@ -85,7 +85,7 @@ function App() {
                 ✕
               </button>
 
-              <h3>Be among the first collectors to grade with Ivy Standards</h3>
+              <h3>Be among the first collectors to get your hands on IVS graded slabs</h3>
 
               <div className="input-group">
                 Email Address *
@@ -156,7 +156,7 @@ function App() {
             {/* Tier 3: IVS */}
             <div className="roi-card highlight">
               <div className="best-value">BEST DOMESTIC ROI</div>
-              <div className="roi-header">Ivy Standards</div>
+              <div className="roi-header">Ivy Standards (IVS)</div>
               <div className="roi-visual">🪔</div>
               <p>Trusted, Local, Efficient</p>
               <div className="roi-value">
@@ -189,7 +189,7 @@ function App() {
             </div>
 
             <div className="card">
-              <h2>Why Ivy Standards?</h2>
+              <h2>Why Ivy Standards (IVS)?</h2>
               <ul>
                 <li>Professional authentication service within India</li>
                 <li>Clear, transparent grading standards</li>
