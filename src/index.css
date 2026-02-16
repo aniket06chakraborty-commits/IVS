@@ -293,7 +293,7 @@ button {
 .corner-image {
   position: absolute;
   width: 180px;
-  opacity: 0.10;
+  opacity: 0.15;
   z-index: 0;
   pointer-events: none;
 }
@@ -307,6 +307,107 @@ button {
   right: 100px;
   top: 40px;
 }
+
+.roi-section {
+  padding: 20px 20px;
+  text-align: center;
+  max-width: 1100px;
+  margin: 0;
+}
+
+.roi-title {
+  color: #004d4d; /* Matches your Ivy Teal */
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.roi-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.roi-card {
+  background: white;
+  border-radius: 20px; /* Matches your existing cards */
+  padding: 15px;
+  width: 280px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.roi-card:hover {
+  transform: translateY(-5px);
+}
+
+.roi-card.highlight {
+  border: 2px solid #b8860b; /* Gold accent for IVS */
+}
+
+.best-value {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #b8860b;
+  color: white;
+  padding: 2px 12px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.roi-header {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #004d4d;
+}
+
+.roi-visual {
+  font-size: 2rem;
+  margin: 5px 0;
+}
+
+.roi-value {
+  background: #f0f7f7;
+  padding: 5px;
+  border-radius: 12px;
+  margin: 10px 0;
+}
+
+.roi-value .mult {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #004d4d;
+}
+
+.roi-value .sub {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.roi-footer {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.danger { color: #d9534f; }
+.warning { color: #b37a2b; }
+.success { color: #489748; }
+
+.roi-disclaimer {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: #888;
+  font-style: italic;
+}
+
 
 
 
@@ -344,7 +445,7 @@ button {
 
   .divider {
     margin-top: 0px;
-    margin-bottom: 12px;
+    margin-bottom: 0px;
   }
 
   /* CARDS */

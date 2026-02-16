@@ -59,7 +59,7 @@ function App() {
 
         {/* HERO SECTION */}
         <section className="hero">
-          <h1>Ivy Standards</h1>
+          <h1>Ivy Standards (IVS)</h1>
           <p>Setting a New Standard for Pokémon Card Grading in India</p>
 
           {!showForm ? (
@@ -123,6 +123,56 @@ function App() {
 
         <div className="divider" />
 
+
+        {/* ROI / COMPARISON SECTION */}
+        <section className="roi-section">
+          <h2 className="roi-title">Why Grade?</h2>
+          <div className="roi-grid">
+
+            {/* Tier 1: Raw */}
+            <div className="roi-card">
+              <div className="roi-header">Raw Card</div>
+              <div className="roi-visual">🃏</div>
+              <p>Ungraded, subjective condition</p>
+              <div className="roi-value">
+                <span className="mult">1x</span>
+                <span class="sub">Market Value</span>
+              </div>
+              <div className="roi-footer danger">High Risk / Low Liquidity</div>
+            </div>
+
+            {/* Tier 2: Global Standard */}
+            <div className="roi-card">
+              <div className="roi-header">Leading Global Graders</div>
+              <div className="roi-visual">🌎</div>
+              <p>Certified, International Market</p>
+              <div className="roi-value">
+                <span className="mult">2.5x - 3x</span>
+                <span class="sub">Average Return</span>
+              </div>
+              <div className="roi-footer warning">High Fees / Long Wait</div>
+            </div>
+
+            {/* Tier 3: IVS */}
+            <div className="roi-card highlight">
+              <div className="best-value">BEST DOMESTIC ROI</div>
+              <div className="roi-header">Ivy Standards</div>
+              <div className="roi-visual">🪔</div>
+              <p>Trusted, Local, Efficient</p>
+              <div className="roi-value">
+                <span className="mult">2x - 2.3x</span>
+                <span class="sub">Projected Return</span>
+              </div>
+              <div className="roi-footer success">Lower Cost / Faster Profit</div>
+            </div>
+
+          </div>
+          <p className="roi-disclaimer">
+            *Estimated multipliers based on market trends. Actual returns depend on card rarity and grade.
+          </p>
+        </section>
+
+
         {/* CARDS SECTION */}
         <section className="cards-section">
           <div className="cards">
@@ -134,6 +184,7 @@ function App() {
                 <li>Shipping and customs add risk</li>
                 <li>India lacks published grading standards</li>
                 <li>Ungraded cards sell cheap</li>
+                <li>Grading price surges if card is highly valued</li>
               </ul>
             </div>
 
@@ -143,8 +194,9 @@ function App() {
                 <li>Professional authentication service within India</li>
                 <li>Clear, transparent grading standards</li>
                 <li>Tamper-evident slabs with secure serialisation</li>
-                <li>Expected pricing of ₹1,500 per card</li>
+                <li>Expected pricing of ₹1,400 - ₹1,700 per card</li>
                 <li>Faster domestic turnaround — no overseas risk</li>
+                <li>Flat grading price irrespective of card value</li>
               </ul>
             </div>
           </div>
