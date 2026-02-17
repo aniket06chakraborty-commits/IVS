@@ -316,7 +316,8 @@ button {
 }
 
 .roi-title {
-  color: #004d4d; /* Matches your Ivy Teal */
+  color: #004d4d;
+  /* Matches your Ivy Teal */
   margin-bottom: 20px;
   font-size: 1.5rem;
 }
@@ -330,10 +331,11 @@ button {
 
 .roi-card {
   background: white;
-  border-radius: 20px; /* Matches your existing cards */
+  border-radius: 20px;
+  /* Matches your existing cards */
   padding: 15px;
   width: 280px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -345,7 +347,8 @@ button {
 }
 
 .roi-card.highlight {
-  border: 2px solid #b8860b; /* Gold accent for IVS */
+  border: 2px solid #b8860b;
+  /* Gold accent for IVS */
 }
 
 .best-value {
@@ -397,9 +400,17 @@ button {
   margin-top: 10px;
 }
 
-.danger { color: #d9534f; }
-.warning { color: #b37a2b; }
-.success { color: #489748; }
+.danger {
+  color: #d9534f;
+}
+
+.warning {
+  color: #b37a2b;
+}
+
+.success {
+  color: #489748;
+}
 
 .roi-disclaimer {
   margin-top: 20px;
@@ -472,13 +483,102 @@ button {
 
   .corner-image.left {
     width: 90px;
-  left: 10px;
-  top: 50px;
-}
+    left: 10px;
+    top: 50px;
+  }
 
-.corner-image.right {
-  width: 90px;
-  right: 10px;
-  top: 40px;
+  .corner-image.right {
+    width: 90px;
+    right: 10px;
+    top: 40px;
+  }
+
+  /* ROI Section - Desktop stays the same */
+  .roi-grid {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 4px 0px;
+    gap: 8px;
+    /* Narrower gaps between cards */
+  }
+
+  .roi-card {
+    background: white;
+    flex: 1;
+    /* This forces them to share the width equally */
+    min-width: 0;
+    /* Prevents overflow */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 8px 4px;
+    /* Ultra-tight internal padding */
+    border-radius: 12px;
+  }
+
+  .roi-section {
+    padding: 20px 4px;
+    /* Tighten outer spacing */
+  }
+
+  .roi-header {
+    font-size: 0.75rem;
+    /* Smaller titles */
+    line-height: 1.1;
+    min-height: 2rem;
+    /* Keep heights consistent */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .roi-visual {
+    font-size: 1.2rem;
+    /* Shrunken emojis */
+    margin: 4px 0;
+  }
+
+  .roi-card p {
+    display: none;
+    /* Hide descriptions to save space */
+  }
+
+  .roi-value {
+    padding: 4px;
+    margin: 4px 0;
+    width: 100%;
+  }
+
+  .roi-value .mult {
+    font-size: 0.9rem;
+    /* Smaller multipliers */
+  }
+
+  .roi-value .sub {
+    font-size: 0.6rem;
+    /* Tiny subtext */
+    display: block;
+  }
+
+  .roi-footer {
+    font-size: 0.6rem;
+    /* Minimal footer text */
+    line-height: 1;
+  }
+
+  /* Adjust the "Best Value" badge for mobile */
+  .best-value {
+    font-size: 0.5rem;
+    padding: 1px 6px;
+    top: -8px;
+    white-space: nowrap;
+  }
+
+  .roi-disclaimer {
+    margin-top: 8px;
+  font-size: 0.6rem;
 }
 }
