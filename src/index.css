@@ -520,7 +520,8 @@ button {
   }
 
   .roi-section {
-    padding: 20px 4px;
+  margin-top: 5px;
+    padding: 0px 4px;
     /* Tighten outer spacing */
   }
 
