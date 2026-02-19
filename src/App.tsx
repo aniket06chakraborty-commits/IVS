@@ -3,7 +3,9 @@ import { supabase } from "./supabase";
 import toast, { Toaster } from "react-hot-toast";
 import imageLeft from "./assets/charizard_icon.png";
 import imageRight from "./assets/pikachu_icon.png";
-
+import rawCardImg from "./assets/rawCard.png";
+import globalGradingImg from "./assets/PSAcard.png";
+import ivsSlabImg from "./assets/IVScard.png";
 
 function App() {
   const [email, setEmail] = useState<string>("");
@@ -60,7 +62,8 @@ function App() {
         {/* HERO SECTION */}
         <section className="hero">
           <h1>Ivy Standards</h1>
-          <p>IVS - Setting a New Standard for Pokémon Card Grading in India</p>
+          <p>IVS</p>
+          <p>Setting a New Standard for Pokémon Card Grading in India</p>
 
           {!showForm ? (
             <button
@@ -132,38 +135,35 @@ function App() {
             {/* Tier 1: Raw */}
             <div className="roi-card">
               <div className="roi-header">Raw Card</div>
-              <div className="roi-visual">🃏</div>
-              <p>Ungraded, subjective condition</p>
+              <img src={rawCardImg} className="roi-image" alt="Raw Card" />
               <div className="roi-value">
                 <span className="mult">1x</span>
                 <span className="sub">Market Value</span>
               </div>
-              <div className="roi-footer danger">High Risk / Low Liquidity</div>
+              <div className="roi-footer danger">Unauthenticated / Lower Market Valuation</div>
             </div>
 
             {/* Tier 2: Global Standard */}
             <div className="roi-card">
               <div className="roi-header">Leading Global Graders</div>
-              <div className="roi-visual">🌎</div>
-              <p>Certified, International Market</p>
+              <img src={globalGradingImg} className="roi-image" alt="Global Graders" />
               <div className="roi-value">
                 <span className="mult">2.5x - 3x</span>
                 <span className="sub">Average Return</span>
               </div>
-              <div className="roi-footer warning">High Fees / Long Wait</div>
+              <div className="roi-footer warning">Premium Valuation / Higher Expenses</div>
             </div>
 
             {/* Tier 3: IVS */}
             <div className="roi-card highlight">
               <div className="best-value">BEST DOMESTIC ROI</div>
               <div className="roi-header">Ivy Standards (IVS)</div>
-              <div className="roi-visual">🪔</div>
-              <p>Trusted, Local, Efficient</p>
+              <img src={ivsSlabImg} className="roi-image" alt="IVS Standard" />
               <div className="roi-value">
                 <span className="mult">2x - 2.3x</span>
                 <span className="sub">Projected Return</span>
               </div>
-              <div className="roi-footer success">Lower Cost / Faster Profit</div>
+              <div className="roi-footer success">Competitive Valuation / Higher Net Return</div>
             </div>
 
           </div>
@@ -194,7 +194,7 @@ function App() {
                 <li>Professional authentication service within India</li>
                 <li>Clear, transparent grading standards</li>
                 <li>Tamper-evident slabs with secure serialisation</li>
-                <li>Expected pricing of ₹1,400 - ₹1,700 per card</li>
+                <li>Expected pricing of ₹1,200 - ₹1,800 per card</li>
                 <li>Faster domestic turnaround — no overseas risk</li>
                 <li>Flat grading price irrespective of card value</li>
               </ul>

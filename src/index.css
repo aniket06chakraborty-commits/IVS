@@ -53,12 +53,7 @@ body {
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--light-gray);
-  margin-bottom: 30px;
-}
-
-button {
-  all: unset;
-  cursor: pointer;
+  margin-bottom: 5px;
 }
 
 .cta-button,
@@ -80,6 +75,9 @@ button {
     -3px -3px 6px var(--stone);
 
   transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.cta-button {
+  margin-top: 20px;
 }
 
 .hero button:hover {
@@ -340,6 +338,7 @@ button {
   display: flex;
   flex-direction: column;
   transition: transform 0.2s;
+  align-items: center;
 }
 
 .roi-card:hover {
@@ -370,16 +369,20 @@ button {
   color: #004d4d;
 }
 
-.roi-visual {
-  font-size: 2rem;
+/* Image scaling */
+.roi-image {
+  width: 100%;
+  width: 60px; /* Limits size so it doesn't overwhelm the card */
+  height: 100px;
   margin: 5px 0;
+  object-fit: contain;
 }
 
 .roi-value {
   background: #f0f7f7;
   padding: 5px;
   border-radius: 12px;
-  margin: 10px 0;
+  margin: 0 0;
 }
 
 .roi-value .mult {
@@ -445,7 +448,7 @@ button {
 
   .hero p {
     font-size: 0.8rem;
-    margin-bottom: 24px;
+    margin-bottom: 5px;
   }
 
   .hero button {
@@ -453,6 +456,10 @@ button {
     margin: 0px auto;
     display: block;
   }
+
+  .cta-button {
+  margin-top: 20px !important;
+}
 
   .divider {
     margin-top: 0px;
@@ -536,11 +543,9 @@ button {
     justify-content: center;
   }
 
-  .roi-visual {
-    font-size: 1.2rem;
-    /* Shrunken emojis */
-    margin: 4px 0;
-  }
+  .roi-image {
+  height: 60px;
+}
 
   .roi-card p {
     display: none;
