@@ -77,7 +77,7 @@ function App() {
                 });
               }}
             >
-              Request Early Access
+              I'm Interested
             </button>
           ) : (
             <div className="form-card">
